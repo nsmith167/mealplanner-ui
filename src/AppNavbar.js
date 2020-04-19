@@ -22,13 +22,13 @@ export default class AppNavbar extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <NavLink href="#">All Recipes</NavLink>
+                        <NavLink href="/recipes">All Recipes</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="#">New Recipe</NavLink>
+                        <NavLink href="/new-recipe">New Recipe</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="#">Schedule</NavLink>
+                        <NavLink href="/schedule">Schedule</NavLink>
                     </NavItem>
                 </Nav>
             </Collapse>
