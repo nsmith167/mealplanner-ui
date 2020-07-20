@@ -68,7 +68,8 @@ class RecipeForm extends Component {
             },
             body: JSON.stringify(recipe)
         });
-        this.props.history.push('/recipes');
+        var submitPath = ((recipe.id) ? ('/recipe/' + recipe.id + '/view') : '/recipes');
+        this.props.history.push(submitPath);
     }
 
     render() {
@@ -95,7 +96,7 @@ class RecipeForm extends Component {
                         </FormGroup>
                         <FormGroup>
                             <Button color="primary" className="saveButton" type="submit">Save</Button>
-                            <Button color="secondary" tag={Link} to='/recipes' className="cancelButton">Cancel</Button>
+                            <Button color="secondary" tag={Link} to={'/recipe/' + recipe.id + '/view'} className="cancelButton">Cancel</Button>
                             <Button color="danger" className="deleteButton" onClick={this.handleDelete}>Delete</Button>
                         </FormGroup>
                     </Form>
